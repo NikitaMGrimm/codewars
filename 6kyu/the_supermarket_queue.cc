@@ -51,3 +51,5 @@ long queueTime2(std::vector<int> customers,int n){
     
   return *std::max_element(queues.cbegin(), queues.cend());
 }
+// explanation of this: we add the customers to the tills with the shortest queues (in order), then the longest till time is the time
+// after which all the queues are empty. (its the longest afterall)
