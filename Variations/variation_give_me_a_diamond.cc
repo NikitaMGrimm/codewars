@@ -25,12 +25,12 @@ and then reverse inner lists / outer list and stitch together into diamond
 
 std::vector<std::vector<char>> upperRightDiamondPiece(char max_letter, char fill_char='.') {
   char abc_begin = 'A';
-  if ('a' <= max_letter < 'A') abs_begin = 'a'; 
+  if ('a' <= max_letter < 'A') abc_begin = 'a'; 
   int size = max_letter - abc_begin + 1;
 
-  std::vector<std::vector<char>> out_vec(size + 1, std::vector<char>(size + 1, fill_char));
+  std::vector<std::vector<char>> out_vec(size, std::vector<char>(size, fill_char));
   for (int i = 0; i < size; ++i) {
-    out_vec[i][i] = abs_begin + i;
+    out_vec[i][i] = abc_begin + i;
   }
 }
 
@@ -42,4 +42,5 @@ int main() {
     }
     std::cout << std::endl;
   }
+  return 0;
 }
