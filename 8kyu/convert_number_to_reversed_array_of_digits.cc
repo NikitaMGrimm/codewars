@@ -20,3 +20,16 @@ std::vector<int> digitize(unsigned long n)
   for (auto&& d : n_str) out.push_back(d - '0');
   return out;
 }
+
+// favorite solution from other user:
+std::vector<int> digitize2(unsigned long n) 
+{     
+    std::vector<int> digits;
+   
+    do {
+        digits.push_back (n % 10);
+        n /= 10;
+    } while (n > 0);
+   
+    return digits;
+}
