@@ -1,3 +1,2 @@
-# codewars
-my codewars solutions 
-https://www.codewars.com/users/NikitaMGrimm
+# cpp-learning-problems 
+various coding problems that I did for cpp
